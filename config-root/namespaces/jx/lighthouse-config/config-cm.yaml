@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        dianqihanwangzi/jenkins-x-project: true
         dianqihanwangzi/jx3-minikube: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        dianqihanwangzi/jenkins-x-project: merge
         dianqihanwangzi/jx3-minikube: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - dianqihanwangzi/jx3-minikube
+        - dianqihanwangzi/jenkins-x-project
       - labels:
         - updatebot
         missingLabels:
@@ -41,7 +44,8 @@ data:
         - needs-rebase
         repos:
         - dianqihanwangzi/jx3-minikube
-      target_url: http://lighthouse-jx./merge/status
+        - dianqihanwangzi/jenkins-x-project
+      target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
