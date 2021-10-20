@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: dianqihanwangzi
+    provider: github
+    repository: jenkins-x-project2
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: dianqihanwangzi-jenkins-x-project2
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/dianqihanwangzi/jenkins-x-project2.git
+  org: dianqihanwangzi
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jenkins-x-project2
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/dianqihanwangzi/jenkins-x-project2
