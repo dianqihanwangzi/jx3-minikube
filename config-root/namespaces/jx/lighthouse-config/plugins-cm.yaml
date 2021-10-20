@@ -10,6 +10,10 @@ data:
       repos:
       - dianqihanwangzi/jenkins-x-project
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - dianqihanwangzi/jenkins-x-project2
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -25,6 +29,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      dianqihanwangzi/jenkins-x-project2:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       dianqihanwangzi/jx3-minikube:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -36,6 +45,22 @@ data:
     owners: {}
     plugins:
       dianqihanwangzi/jenkins-x-project:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      dianqihanwangzi/jenkins-x-project2:
       - approve
       - assign
       - blunderbuss
@@ -82,6 +107,9 @@ data:
       trusted_org: todo
     - repos:
       - dianqihanwangzi/jenkins-x-project
+      trusted_org: todo
+    - repos:
+      - dianqihanwangzi/jenkins-x-project2
       trusted_org: todo
     welcome:
     - message_template: Welcome
