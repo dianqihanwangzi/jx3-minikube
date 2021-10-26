@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: jenkins-x-golang
     - name: jenkins-x-node
     - name: jenkins-x-project
     - name: jenkins-x-project2
